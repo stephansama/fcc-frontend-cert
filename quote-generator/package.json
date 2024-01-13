@@ -1,0 +1,63 @@
+{
+	"name": "quote-generator",
+	"displayName": "FCC Quote Gen",
+	"license": "MIT",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"author": {
+		"name": "Stephan Randle",
+		"url": "https://github.com/stephansama",
+		"email": "stephanrandle.dev@gmail.com"
+	},
+	"config": {
+		"ts_in": "scripts/index.ts",
+		"css_in": "styles/index.pcss",
+		"ts_out": "build/main.bundle.js",
+		"css_out": "build/main.bundle.css"
+	},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"build": "pnpm run build:css && pnpm run build:ts",
+		"build:ts": "esbuild $npm_package_config_ts_in --outfile=$npm_package_config_ts_out --bundle --minify",
+		"build:css": "tailwindcss -i $npm_package_config_css_in -o $npm_package_config_css_out --minify --postcss",
+		"dev": "pnpm run dev:ts & pnpm run dev:css",
+		"dev:css": "tailwindcss -i $npm_package_config_css_in -o $npm_package_config_css_out --watch --postcss",
+		"dev:ts": "esbuild $npm_package_config_ts_in --outfile=$npm_package_config_ts_out --bundle --watch=forever",
+		"fmt": "prettier . --write",
+		"fmt:check": "prettier . --check",
+		"lint:fix": "eslint . --fix",
+		"lint": "eslint ."
+	},
+	"prettier": {
+		"semi": true,
+		"useTabs": true,
+		"singleQuote": false,
+		"jsxSingleQuote": false,
+		"trailingComma": "es5",
+		"quoteProps": "consistent",
+		"pluginSearchDirs": false,
+		"plugins": [
+			"prettier-plugin-tailwindcss"
+		]
+	},
+	"devDependencies": {
+		"@iconify/tailwind": "^0.1.4",
+		"@types/figlet": "^1.5.8",
+		"@types/node": "^20.11.0",
+		"autoprefixer": "^10.4.16",
+		"esbuild": "^0.19.11",
+		"postcss": "^8.4.33",
+		"postcss-import": "^16.0.0",
+		"postcss-preset-env": "^9.3.0",
+		"prettier": "2.8.0",
+		"prettier-plugin-tailwindcss": "0.4.1",
+		"tailwindcss": "^3.4.1",
+		"typescript": "^5.3.3"
+	},
+	"dependencies": {
+		"@fontsource-variable/quicksand": "^5.0.16",
+		"@iconify-json/bi": "^1.1.23",
+		"figlet": "^1.7.0"
+	}
+}

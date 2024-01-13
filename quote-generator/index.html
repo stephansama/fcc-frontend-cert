@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="build/main.bundle.css" />
+		<script src="build/main.bundle.js" defer></script>
+		<script
+			src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"
+			defer
+		></script>
+		<title>Stephan Randle | FreeCodeCamp - Build a Random Quote Machine</title>
+	</head>
+	<body class="bg-zinc-300 transition-colors duration-700">
+		<main id="wrapper">
+			<div
+				id="quote-box"
+				class="relative flex h-48 w-2/3 max-w-96 flex-col rounded-lg bg-gray-50 shadow-lg shadow-black/10"
+			>
+				<i class="icon-[bi--quote] absolute -left-4 text-3xl"></i>
+				<i class="icon-[bi--quote] absolute -right-4 rotate-180 text-3xl"></i>
+				<span id="text" class="flex-grow p-4 text-center font-extrabold"></span>
+				<span
+					id="author"
+					class="relative ml-auto mr-4 before:pr-2 before:content-['-']"
+				></span>
+				<div class="flex flex-row-reverse justify-between p-4 text-xs">
+					<button
+						class="flex items-center gap-1 rounded-lg bg-blue-500 px-4 py-2 font-sans text-xs font-bold uppercase text-white shadow-md shadow-blue-500/20 transition-all focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+						id="new-quote"
+					>
+						<i class="icon-[bi--plus]"></i>
+						New Quote
+					</button>
+					<a
+						target="_top"
+						class="inline-flex items-center gap-1"
+						title="Tweet this quote!"
+						href="twitter.com/intent/tweet"
+						id="tweet-quote"
+					>
+						<i class="icon-[bi--twitter]"></i>
+						<span>Tweet</span>
+					</a>
+				</div>
+			</div>
+		</main>
+		<footer
+			class="flex flex-col-reverse items-center justify-center gap-4 pb-4 sm:flex-row"
+		>
+			<div class="text-sm">
+				<a href="">Stephan Randle</a>
+				&copy;
+				<span id="copyright"></span>
+			</div>
+			<div class="flex items-center gap-3 text-lg">
+				<a
+					href="https://github.com/stephansama"
+					target="_blank"
+					rel="noreferrer"
+					class="inline-flex items-center"
+				>
+					<i class="icon-[bi--github]"></i>
+					<span class="sr-only">GitHub</span>
+				</a>
+				<a
+					href="https://www.linkedin.com/in/stephan-randle-38a30319a/"
+					target="_blank"
+					rel="noreferrer"
+					class="inline-flex items-center"
+				>
+					<i class="icon-[bi--linkedin]"></i>
+					<span class="sr-only">LinkedIn</span>
+				</a>
+			</div>
+		</footer>
+	</body>
+</html>
