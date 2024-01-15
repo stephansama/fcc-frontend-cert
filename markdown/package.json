@@ -1,0 +1,38 @@
+{
+  "name": "markdown",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "prettier": {
+    "semi": true,
+    "useTabs": true,
+    "singleQuote": false,
+    "jsxSingleQuote": false,
+    "trailingComma": "es5",
+    "quoteProps": "consistent",
+    "pluginSearchDirs": false,
+    "plugins": [
+      "prettier-plugin-tailwindcss"
+    ]
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.10",
+    "@types/dompurify": "^3.0.5",
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.33",
+    "prettier": "2.8.0",
+    "prettier-plugin-tailwindcss": "0.4.1",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5.2.2",
+    "vite": "^5.0.8"
+  },
+  "dependencies": {
+    "dompurify": "^3.0.8",
+    "marked": "^11.1.1"
+  }
+}
